@@ -7,7 +7,7 @@
     <title>Playground</title>
 </head>
 <body>
-    <form action="index.php" method="get">
+    <form action="index.php" method="post">
         <label>username:</label><br>
         <input type="text" name="username"><br>
         <label>password:</label><br>
@@ -17,6 +17,6 @@
 </body>
 </html>
 <?php 
-    echo $_GET["username"];
-    echo $_GET["password"];
+    echo "{$_POST["username"]} <br>";
+    echo "{$_POST["password"]} <br>";
 ?>
