@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-$pdo = new PDO("mysql:host=localhost;dbname=taskmanager;charset=utf8", "root", "");
+$pdo = new PDO("mysql:host=localhost;dbname=testdb;charset=utf8", "root", "");
 
 // Get action from URL (?action=list/add/delete/update)
 $action = $_GET['action'] ?? '';

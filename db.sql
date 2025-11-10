@@ -1,5 +1,5 @@
-CREATE DATABASE taskmanager;
-USE taskmanager;
+CREATE DATABASE testdb;
+USE testdb;
 
 CREATE TABLE tasks (
   id INT AUTO_INCREMENT PRIMARY KEY,
