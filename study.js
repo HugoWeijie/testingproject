@@ -1,3 +1,4 @@
+//all for studying purposes(nothing here is supposed to work)
 let _x = 5;
 const $y= 6;
 //const for constant values
