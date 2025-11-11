@@ -4,12 +4,12 @@ async function loadTests() {
   const list = document.getElementById('testlist');
   list.innerHTML = '';
   tasks.forEach(task => {
-    const li = document.createElement('ol');
+    const li = document.createElement('li');
     li.textContent = task.title;
     const delBtn = document.createElement('button');
     delBtn.textContent = 'REMOVE';
     delBtn.onclick = async () => {
-      await fetch(`api.php?action=delete&id=${task.id}`);
+      await fetch('api.php?action=delete&id=${task.id}');
       loadTests();
     };
     li.appendChild(delBtn);
@@ -26,6 +26,10 @@ document.getElementById('addBtn').onclick = async () => {
     body: JSON.stringify({ title })
   });
   document.getElementById('test').value = '';
+  loadTests();
+};
+document.hetELementById('deleteAll').onclick = async () => {
+  await fetch('api.php?action=deleteAll');
   loadTests();
 };
 
